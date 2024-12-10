@@ -1,0 +1,85 @@
+.contenedor_menu {
+  position: absolute;
+  z-index: 100;
+}
+
+/* hacer efecto de abrir menu */
+.menu {
+  transition-duration: 1s;
+  /* z-index: 1000; */
+}
+.menuAbierto {
+  width: 400px;
+  height: 100vh;
+  background-color: #daba46;
+  transition-duration: 1s;
+}
+
+/* efecto de trasladar el span cuando el menu se abre */
+.menuToggle {
+  position: relative;
+  width: 100%;
+  /* z-index: 1000; */
+}
+.menuToggle span {
+  position: relative;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+
+.menuToggle img {
+  width: 100px;
+}
+.menuOpcion{
+  font-size: 50px;
+}
+.menuOpcionTrasladar {
+  transform: translateX(255px) rotate(90deg);
+  transition-duration: 1s;
+}
+
+
+/* aqui el efecto de ocultar y mostrar contneiod de los items */
+
+.menu_contenido {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+.menu_contenidoAbierto {
+  display: flex;
+  flex-direction: column;
+}
+
+/* contenedor item menu */
+.menu-item_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+/* items del menu */
+.title-items {
+  font-family: "Montserrat";
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.content_items_link{
+    font-family: 'open sans';
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+}
+
+.content_items {
+  display: none;
+}
+
+.content_itemsAbierto {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="../app/content/resources/css/subventana.css">
+<div class="subventana">
+    <div id="formularioDocumento">
+        <h2>Agregar Documento</h2>
+        <form id="formAgregarDocumento" enctype="multipart/form-data">
+        
+            <input type="hidden" id="id_gestion" name="id_gestion" required>
+            
+            <div class="form-group">
+                <label for="nombre">Nombre del Documento:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="contenido">Archivo:</label>
+                <input type="file" id="contenido" name="contenido" required>
+            </div>
+            <div class="form-group-sudmit">
+                <button type="submit">Agregar Documento</button>
+
+            </div>
+        </form>
+    </div>
+</div>

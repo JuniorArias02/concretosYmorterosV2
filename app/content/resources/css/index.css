@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.app{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezado{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}
+ 
+.pie{
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+}
+
+.contenido{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+form{
+    position: relative;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.form_logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form_logo img {
+    width: 300px;
+}
+.form_campos{
+    margin-top: 15px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form_boton{
+    margin-top: 15px;
+
+}
+label{
+    font-family: "roboto";
+    font-weight: 600;
+}
+/* botones */
+input[type="text"],
+input[type="password"],
+select{
+    border: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 30px;
+    font-family: 'roboto';
+    font-weight: 400;
+    font-size: 1.3em;
+}
+
+
+/* #fed042 */
+
+.form_boton button{
+    border: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 30px;
+    font-family: 'roboto';
+    font-weight: 400;
+    font-size: 1.3em;
+    background-color:#fed042;
+}

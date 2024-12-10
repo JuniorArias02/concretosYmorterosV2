@@ -1,0 +1,201 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.app{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido{
+    overflow-y: scroll;
+    z-index: 1;
+    height: 100vh;
+}
+
+.inicio-content {
+    width: 100%;
+    height: auto;
+}
+
+.ic-encabezado {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.fondo-negro {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.288);
+}
+
+.ic-en-title {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.ic-en-title h3 {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: white;
+    /* font-size: 1.5rem; */
+    font-size: 3rem;
+    text-align: center;
+}
+
+.ic-encabezado img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Asegura que la imagen cubra todo el espacio del contenedor */
+    object-position: right;
+    /* Muestra la parte derecha de la imagen */
+
+}
+
+/* parte del cuerpo */
+.in-co-cuerpo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.in-co-cu {
+    margin-top: 45px;
+    width: 90%;
+    height: auto;
+    border-top: 3px solid #DABA46;
+
+}
+
+/* soy pesimo declarando variables xd */
+.box-in-co-cu {
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    border-bottom: 3px solid #DABA46;
+    align-items: center;
+    padding: 5px;
+}
+
+.box-img-in-co {
+    width: 80%;
+    /* height: 200px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-img-in-co-end {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-img-in-co img {
+    width: 100%;
+}
+
+.box-img-in-co-end img {
+    width: 100%;
+}
+
+.box-text-in {
+    width: 100%;
+    color: #666666;
+}
+
+.box-text-in h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    margin-bottom: 0;
+
+}
+
+.box-text-in p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: justify;
+
+}
+
+.box-text-in ol {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: justify;
+
+}
+
+.box-text-in li {
+    margin-bottom: 15px;
+    text-align: justify;
+
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+.pie-contenido{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+@media (min-width:800px) {
+    .ic-encabezado {
+        height: 400px;
+
+    }
+}
+
+@media (min-width:1000px) {
+    .box-in-co-cu {
+        flex-direction: row;
+
+    }
+
+    .in-co-cu {
+        width: 1000px;
+    }
+
+    .box-img-in-co img {
+        width: 400px;
+    }
+
+    .box-text-in {
+        text-align: center;
+    }
+}

@@ -1,0 +1,56 @@
+.border-none {
+    border-bottom-color: transparent;
+  }
+  
+  .box-works-cu {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .box-text-in-works h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    color: #fed442;
+    margin-bottom: 0;
+  }
+  .box-text-in-works p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    color: #4d4d4d;
+    margin-bottom: 0;
+  }
+  .box-boton-in-works {
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(150px, 300px)
+    ); /* Ajustable, pero con un ancho máximo */
+    grid-gap: 20px; /* Espacio entre los items */
+    justify-content: center; /* Centramos los elementos cuando hay menos columnas */
+    align-items: center;
+  }
+  .box-boton-in-works button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    border: none;
+    background-color: #fed042;
+    height: 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition-duration: 0.6s;
+  }
+  
+  @media (min-width: 800px) {
+    .box-text-in-works {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+  

@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.contenedorProcesos {
+  width: 100%;
+  height: 100vh;
+}
+
+.procesoEncabezado {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.procesosEncabezado_titulo {
+  font-family: "montserrate", sans-serif;
+  font-weight: 400;
+  color: #666666;
+}
+
+.procesosCuerpo {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gestiones_titulo {
+  text-align: center;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+}
+
+.gestionesContenido {
+  width: 100%;
+}
+
+.gestionesContenido {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.gestionesContenido.show {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  opacity: 1;
+}
+
+.gestiones_titulo {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 38px;
+}
+
+.gestiones-tipo {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.gestionesContenido a {
+  text-decoration: none;
+  color: black;
+  font-family: sans-serif;
+}
+.eliminarDocumento {
+  border: none;
+  border-radius: 50px;
+  background-color: #e63f32;
+}
+.eliminarDocumento span {
+  color: white;
+}
+
+.añadirDocumento {
+  border: none;
+  border-radius: 50px;
+  background-color: rgb(221, 221, 221);
+}
+
+@media (min-width: 650px) {
+  .procesosCuerpo {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+}

@@ -1,0 +1,30 @@
+.footer-content{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fo-co{
+    width: 90%;
+}
+.fo-co p{
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 80%;
+}
+/* span  */
+.derechos-reservados{
+color: #DABA46;
+}
+.diseno-desarrollo{
+    color: #DABA46;
+}
+.new-gestion{
+    color: #DABA46;
+}
+.derecho-name{
+    color: rgb(122, 121, 121);
+}
