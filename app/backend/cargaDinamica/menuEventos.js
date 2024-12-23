@@ -5,20 +5,22 @@ import { agregarDocumento,  } from "../documentos/documentoLogica.js";
 
 let paginaActual = '';
 export const CONTENIDO_DINAMICO = document.getElementById("contenidoDinamico");
-
-
-const cargarStyle = (url, isPaginado = false) => {
-  return new Promise((resolve, reject) => {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = url;
-    link.onload = resolve;
-    link.onerror = reject;
-    if (isPaginado) {
-      link.classList.add('paginado-dinamico');
-    }
-    document.head.appendChild(link);
+const cargarStyles = (urls, isPaginado = false) => {
+  const promises = urls.map(url => {
+    return new Promise((resolve, reject) => {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = url;
+      link.onload = resolve;
+      link.onerror = reject;
+      if (isPaginado) {
+        link.classList.add('paginado-dinamico');
+      }
+      document.head.appendChild(link);
+    });
   });
+
+  return Promise.all(promises); // Espera que todas las hojas de estilo se carguen
 };
 
 const cargarHTML = async (url) => {
@@ -31,25 +33,15 @@ const cargarHTML = async (url) => {
 };
 
 const CARGAR_PAGINA = async (pageUrl, styles = [], linkUrl, forceLoad = false) => {
-  // if (paginaActual === pageUrl && !forceLoad) {
-  //   console.log("Esta página ya está abierta.");
-  //   return;
-  // }
-  // if (linkUrl) {
-  //   window.history.pushState({ page: pageUrl }, "", linkUrl);
-  // }
-
-
-
   paginaActual = pageUrl;
-
 
   borrarRecursosCargados();
   removerContenidoDinamico();
 
   if (styles.length > 0) {
     try {
-      await Promise.all(styles.map((url, index) => cargarStyle(url, index === 0)));
+      // Aquí se debe llamar a la función cargarStyles, no cargarStyle
+      await cargarStyles(styles, true); // True si quieres aplicar la clase 'paginado-dinamico'
     } catch (err) {
       console.error("Error cargando los estilos:", err);
     }
@@ -63,15 +55,10 @@ const CARGAR_PAGINA = async (pageUrl, styles = [], linkUrl, forceLoad = false) =
     return;
   }
 
-
-
-
-  // abrirMenu();
+  // abrirMenu();  // Asegúrate de definir esta función si es necesario
   console.log(linkUrl);
-  inicializarEventosPaginados(linkUrl);
-
+  inicializarEventosPaginados(linkUrl); // Inicializa eventos para la paginación
 };
-
 
 function inicializarEventosPaginados(page) {
   const id_page = page;
@@ -130,49 +117,49 @@ menuLinks.forEach(link => {
       case "1":
         CARGAR_PAGINA(
           "content/process/procesos-contenido1.php",
-          ["content/resources/css/procesosContenido.css"],
+          ["content/resources/css/procesosContenido.css","content/resources/css/subirDocumento.css"],
           page
         );
         break;
       case "2":
         CARGAR_PAGINA(
           "content/process/procesos-contenido2.php",
-          ["content/resources/css/procesosContenido.css"],
+          ["content/resources/css/procesosContenido.css","content/resources/css/subirDocumento.css"],
           page
         );
         break;
       case "3":
         CARGAR_PAGINA(
           "content/process/procesos-contenido3.php",
-          ["content/resources/css/procesosContenido.css"],
+          ["content/resources/css/procesosContenido.css","content/resources/css/subirDocumento.css"],
           page
         );
         break;
       case "4":
         CARGAR_PAGINA(
           "content/process/procesos-contenido4.php",
-          ["content/resources/css/procesosContenido.css"],
+          ["content/resources/css/procesosContenido.css","content/resources/css/subirDocumento.css"],
           page
         );
         break;
       case "5":
         CARGAR_PAGINA(
           "content/process/procesos-contenido5.php",
-          ["content/resources/css/procesosContenido.css"],
+          ["content/resources/css/procesosContenido.css","content/resources/css/subirDocumento.css"],
           page
         );
         break;
       case "6":
         CARGAR_PAGINA(
           "content/process/procesos-contenido6.php",
-          ["content/resources/css/procesosContenido.css"],
+          ["content/resources/css/procesosContenido.css","content/resources/css/subirDocumento.css"],
           page
         );
         break;
       case "7":
         CARGAR_PAGINA(
           "content/process/procesos-contenido7.php",
-          ["content/resources/css/procesosContenido.css"],
+          ["content/resources/css/procesosContenido.css","content/resources/css/subirDocumento.css"],
           page
         );
         break;
