@@ -1,6 +1,7 @@
 // import { abrirMenu } from "../../content/resources/js/menuAnimacion/menuAnimacion.js";
 import { efectoProcesos,abrirFormularioAgregar, eliminarDocumento } from "../../content/resources/js/procesos/procesosContenido.js";
 import { agregarDocumento,  } from "../documentos/documentoLogica.js";
+import { cerrarMenu } from "../../content/resources/js/menuAnimacion/menuAnimacion.js";
 
 
 let paginaActual = '';
@@ -33,6 +34,7 @@ const cargarHTML = async (url) => {
 };
 
 const CARGAR_PAGINA = async (pageUrl, styles = [], linkUrl, forceLoad = false) => {
+cerrarMenu();
   paginaActual = pageUrl;
 
   borrarRecursosCargados();

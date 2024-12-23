@@ -1,5 +1,6 @@
 
 export function abrirMenu() {
+
     const cerrado = "menu";
     const abierto = "close";
     const menuToggle = document.querySelector('.menuToggle');
@@ -28,6 +29,7 @@ export function abrirMenu() {
         menu_contenido.classList.add('menu_contenidoAbierto');
     }
 
+
     function minimizarMenu() {
         menu.classList.remove("menuAbierto");
         menuToggle.classList.remove('menuToggleAbierto');
@@ -35,7 +37,6 @@ export function abrirMenu() {
         menu_contenido.classList.remove('menu_contenidoAbierto');
     }
 
-    
     const items = document.querySelectorAll('.title-items');
 
     items.forEach(item => {
@@ -50,14 +51,26 @@ export function abrirMenu() {
             }
             const arrow = item.querySelector('.arrow-item');
             if (content.style.display === "flex") {
-                arrow.textContent = 'keyboard_arrow_up';  
+                arrow.textContent = 'keyboard_arrow_up';
             } else {
                 arrow.textContent = 'keyboard_arrow_down';
             }
         });
     });
-
-
-
 }
 
+
+export function cerrarMenu() {
+    const menuToggle = document.querySelector('.menuToggle');
+    const menuBoton = document.querySelector('.menuOpcion');
+    const menu = document.querySelector('.menu');
+    const menu_contenido = document.querySelector('.menu_contenido');
+
+    const cerrado = "menu";
+    menu.classList.remove("menuAbierto");
+    menuToggle.classList.remove('menuToggleAbierto');
+    menuBoton.classList.remove('menuOpcionTrasladar');
+    menu_contenido.classList.remove('menu_contenidoAbierto');
+    menuBoton.textContent = cerrado;
+
+}
