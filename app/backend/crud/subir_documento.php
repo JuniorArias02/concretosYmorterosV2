@@ -29,17 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $fechaSubida = date('Y-m-d H:i:s');
 
             // Validar el tipo MIME (puedes agregar más tipos permitidos según sea necesario)
-            $tiposPermitidos = [
-                'application/msword',  
-                'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-                'application/vnd.ms-excel',  
-                'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',  
-                'application/vnd.ms-powerpoint',  
-                'application/vnd.openxmlformats-officedocument.presentationml.presentation',  
-                'image/jpeg',  
-                'image/png'   
-            ];
-            
+            $tiposPermitidos = ['application/pdf', 'image/jpeg', 'image/png', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
             if (!in_array($tipoMime, $tiposPermitidos)) {
                 echo json_encode(['success' => false, 'message' => 'Tipo de archivo no permitido.']);
                 exit;

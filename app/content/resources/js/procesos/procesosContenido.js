@@ -51,9 +51,7 @@ export function abrirFormularioAgregar() {
             const testResult = await testResponse.json();
             if (testResult.success) {
                 alert(`Prueba exitosa: ${testResult.message}`);
-            } else {
-                alert('El archivo PHP respondió, pero hubo un error inesperado.');
-            }
+            }  
         } catch (error) {
             alert('Error en la conexión al servidor: ' + error.message);
             return;
