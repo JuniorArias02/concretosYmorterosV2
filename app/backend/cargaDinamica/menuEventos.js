@@ -1,6 +1,6 @@
 // import { abrirMenu } from "../../content/resources/js/menuAnimacion/menuAnimacion.js";
-import { efectoProcesos, abrirFormularioAgregar } from "../../content/resources/js/procesos/procesosContenido.js";
-import { agregarDocumento, eliminarDocumento } from "../documentos/documentoLogica.js";
+import { efectoProcesos,abrirFormularioAgregar, eliminarDocumento } from "../../content/resources/js/procesos/procesosContenido.js";
+import { agregarDocumento,  } from "../documentos/documentoLogica.js";
 
 
 let paginaActual = '';
@@ -79,7 +79,7 @@ function inicializarEventosPaginados(page) {
   if (!isNaN(id_page)) {
     efectoProcesos();
     abrirFormularioAgregar();
-    agregarDocumento();
+    // agregarDocumento();
     eliminarDocumento();
   }
 
